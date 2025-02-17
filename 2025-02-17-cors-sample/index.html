@@ -34,7 +34,7 @@
     });
 
     document.getElementById('me').addEventListener('click', function() {
-      axios.get("http://localhost:8001/api/v1/me").then(response =>
+      axios.get("http://localhost:8001/api/v1/me", {withCredentials: true}).then(response =>
         dbg(response)
       ).catch(error =>
         dbg(error.response)
