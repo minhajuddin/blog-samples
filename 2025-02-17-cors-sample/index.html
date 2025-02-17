@@ -25,7 +25,7 @@
 
 
     document.getElementById('login').addEventListener('click', function() {
-      axios.post("http://localhost:8001/api/v1/login").then(response =>
+      axios.post("http://localhost:8001/api/v1/login", {}, {withCredentials: true}).then(response =>
         dbg(response)
       ).catch(error =>
           dbug(error.response)
